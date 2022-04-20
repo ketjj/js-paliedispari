@@ -1,0 +1,53 @@
+body{
+  background-color: rgb(255, 166, 166);
+
+}
+.k_box{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.main_box{
+  width: 80%;
+  height: 500px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+
+.k_form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.kform_style{
+  border: 1px solid #a10a0a;
+  border-radius: 20px;
+  padding-left: 10px;
+}
+
+.k_label,
+.insert_number{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.insert_number{
+  border-radius: 20px;
+}
+
+.col {
+  height: 140px;
+  
+}
+
+.upper {
+  text-transform: uppercase;
+}
+.debug{
+  background-color: rgba(23, 22, 20, .5);
+}
+
+.btn-toggle{
+  display:none;
+}
