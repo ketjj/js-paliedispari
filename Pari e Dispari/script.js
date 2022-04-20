@@ -28,7 +28,7 @@ let userInsertNumber = prompt('Inserire un numero da 1 a 5');
 
 
 
-//  -Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+//  -Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione ).
 
 function getRandomNumber(min, max){
   return Math.floor(Math.random() * (max-min + 1) - min);
