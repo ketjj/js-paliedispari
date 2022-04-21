@@ -1,1 +1,24 @@
+body{
+  background-color: rgb(235, 219, 249);
+}
 
+
+.k_container{
+  width: 80%;
+  max-width:550px;
+  margin: 0 auto;
+}
+
+#choice, #numero{
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.upper{
+  text-transform: uppercase;
+}
+
+.red {
+  color: rgb(234, 71, 22);
+}
