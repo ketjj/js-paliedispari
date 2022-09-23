@@ -8,72 +8,49 @@
 Bonus: L’inserimento avviene tramite un campo input */
 
 
-//Definisco qui le funzioni che userò in seguito
+//TODO 
+/*1.Select dom Element; + content;
+2. pari o dispari ?
+3.generate a random comp Number;*/
 
-function getRandomNumber(min, max){
-  return Math.floor(Math.random() * (max-min + 1) + min);
+
+// let compNumber = Math.trunc((Math.random() * 5)+1);
+// console.log('Computer'+compNumber);
+
+
+
+function calcolate(){
+
+  let playerSelect = document.getElementById('choice').value;
+  console.log('Selected type'+'='+playerSelect);
+
+  compNumber = Math.trunc((Math.random() * 5)+1);
+  console.log('Computer'+compNumber);
+
+  let player = document.getElementById('number');
+  const playerNumber = player.value;
+  console.log(playerNumber);
+
+  const totSum = Number(playerNumber) + compNumber;
+  console.log('Total'+totSum);
+  let isPari = '';
+  if(totSum % 2 === 0){
+    isPari = 'pari'
+  }else{
+    isPari = 'dispari'
+  }
+  console.log('IsPari=', isPari);
+
+  let msg;
+  if(playerSelect == isPari ){
+    msg = `Ha vinto IL PLAYER!!! Il player ha selezionato: ${playerSelect} e il numero: ${playerNumber}, sommando con il numero del computer ${compNumber} ci da --> ${totSum}, che è uguale al ${playerSelect} `
+  }else{
+    msg = 'Ha vinto il computer'
+  }
+  console.log('Msg' , msg);
+
+
+  document.getElementById('output-paridispari').textContent = msg;
+
 }
-
-function isEven(number){
- if ( number % 2 === 0)
-  return true; 
- else 
-  return false;
-}
-
-
-// -L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
-
-let pariDispari = prompt( 'Pari o Dispari?');
-
-while ((pariDispari.toLowerCase() != 'pari') && (pariDispari.toLowerCase() != 'dispari')) {
-  alert('Inserire solo pari o dispari')
-  pariDispari = prompt( 'Pari o Dispari?');  
-}
-  
-
-let userInsertNumber = prompt('Inserire un numero da 1 a 5');
- while (userInsertNumber > 5 || isNaN(userInsertNumber)){
-   alert ('Inserire un numero da 1 a 5');
-   userInsertNumber = prompt('Inserire un numero da 1 a 5');
- }
-
-userInsertNumber = parseInt(userInsertNumber);
-console.log('User\'s choice:' + pariDispari);
-console.log("User Input " + userInsertNumber);
-
-
-//  -Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione ).
-
-
-let computerNumber = getRandomNumber (1,5)
-
-console.log("Computer Input " + computerNumber);
-
-// Sommiamo i due numeri
-
-const totSum = userInsertNumber + computerNumber;
-console.log('Somma 2 input: ' + totSum);
-
-// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-
-const even = isEven(totSum);
-console.log("Somma è pari? " + even);
-
-
-// Dichiariamo chi ha vinto.
-
-
-let result = document.getElementById('result');
-
-if ((pariDispari.toLowerCase() === 'pari') && (even === true)){
-  result.innerHTML = 'Hai vinto!';
-} else if((pariDispari.toLowerCase() === 'dispari') && (even === false)){
-  result.innerHTML = 'Hai vinto!';
-} else{
-  result.innerHTML = 'Hai perso!';
-}
-
-
-
 
